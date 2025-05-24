@@ -1,38 +1,361 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+}
+
+.login-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn {
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  margin-right: 8px;
+}
+
+.btn:hover {
+  background-color: #4338ca;
+}
+
+.btn-gray {
+  background-color: #e2e8f0;
+  color: #333;
+}
+
+.btn-gray:hover {
+  background-color: #cbd5e1;
+}
+
+.btn-red {
+  background-color: #ef4444;
+}
+
+.btn-red:hover {
+  background-color: #dc2626;
+}
+
+.btn-green {
+  background-color: #10b981;
+}
+
+.btn-green:hover {
+  background-color: #059669;
+}
+
+.btn-orange {
+  background-color: #f97316;
+}
+
+.btn-orange:hover {
+  background-color: #ea580c;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.timer-display {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.leaderboard-title {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.leaderboard {
+  margin-top: 1rem;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f5f9;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+.pomodoro-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pomodoro-phase {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  color: white;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pomodoro-phase.work {
+  background-color: #4f46e5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pomodoro-phase.shortBreak {
+  background-color: #10b981;
+}
+
+.pomodoro-phase.longBreak {
+  background-color: #f97316;
+}
+
+.pomodoro-time {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.pomodoro-cycle {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.login-button-group {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.btn-link:hover {
+  color: #4338ca;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 8px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+.pomodoro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f4f6fb;
+}
+
+.pomodoro-card {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  animation: fadeIn 0.6s ease;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.pomodoro-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.session-label {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.time-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+.start-button {
+  background-color: #6366f1;
   color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.start-button:hover {
+  background-color: #4f46e5;
 }
 
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.profile-photo {
+  border-radius: 50%;
+  width: 120px;
+  margin: 1rem auto;
+  display: block;
+  border: 3px solid #6366f1;
+}
+
+.profile-info {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.stats-box {
+  margin-top: 2rem;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.stats-box h4 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .login-container,
+body.dark-mode .pomodoro-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .leaderboard-item {
+  background-color: #2a2a2a;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+body.dark-mode .btn {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #444;
+}
+
+body.dark-mode .btn-darkmode {
+  background-color: transparent;
+  border: 1px solid #666;
+  color: #eee;
+}
+
+body.dark-mode .stats-box {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .recharts-tooltip-wrapper {
+  background-color: #2a2a2a !important;
+  color: #fff !important;
 }
