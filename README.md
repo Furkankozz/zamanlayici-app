@@ -25,7 +25,18 @@ Bu proje kullanıcıların süre tutabileceği, Pomodoro tekniğini kullanabilec
    npm install
    ```
 
-3. **Uygulamayı başlatın:**
+3. `.env` **dosyası oluşturun ve değerleri doldurun.**
+    ```env
+    REACT_APP_FIREBASE_API_KEY=
+    REACT_APP_FIREBASE_AUTH_DOMAIN=
+    REACT_APP_FIREBASE_PROJECT_ID=
+    REACT_APP_FIREBASE_STORAGE_BUCKET=
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
+    REACT_APP_FIREBASE_APP_ID=
+    REACT_APP_FIREBASE_MEASUREMENT_ID=
+    ```
+
+4. **Uygulamayı başlatın:**
    ```sh
    npm start
    ```
@@ -33,6 +44,7 @@ Bu proje kullanıcıların süre tutabileceği, Pomodoro tekniğini kullanabilec
 
 ## Kullanılan Teknolojiler
 
+- Node.js
 - React
 - Firebase (Authentication & Firestore)
 - Chart.js & react-chartjs-2
